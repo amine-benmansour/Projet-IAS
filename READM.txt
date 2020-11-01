@@ -1,0 +1,11 @@
+Durant ce projet voici ce que j'ai tenté de réaliser :
+
+créer un fichier qui contient 40 octet par ligne pour ensuite l'afficher et le stocker dans la mémoire est sous forme d'un tableau de 4096
+l'objectif était de stocker chaque ligne du fichier dans la mémoire et de l'afficher
+ensuite de faire une boucle de 1000 itération pour réaliser toute les instruction de la mémoire 1 à 1
+pour cela réaliser dans un switch le décodage de chaque instruction mais je n'a pas réussi -> idée était de prendre les 8 premier octet de l'instruction de gauche et les 8 premier de l'instruction de droite et comparer avec l'une des 21 types d'instruction diffèrentes et réaliser l'operation correspondante
+une fois le décodage realiser le but était de copier dans le MAR la valeur du pc qui va permettre de donner d'obtenir dans le MBR, le mar va être donner en adresse en entree dans la mémoire principale grace au decodage la memoire va comprendre l'instruction ex : en Load M(X)300, ADD M(X) 301 celui ci sera copier dans le MBR
+ensuite placer l'instruction de droite dans l'IBR. Ensuite copier les 8 premier octet de l'instruction de gauche et positionner dans MAR les 12 octet suivant correspondant a l'adresse aisnsi le MAR est donc mis à jour pour permettee de relaiser l'operation a effectuer.
+ensuite l'opérande de droite stocker dans l'IBR va transmettre à l'IR son opérande code et les 12 octets suivant dans le MAR pour réaliser l'instruction qui doit être réalisé.
+
+ce qui est en : // permet de voir ce que j'ai tenter de realiser mais qui ne fonctionne pas
